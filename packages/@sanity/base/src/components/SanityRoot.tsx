@@ -1,8 +1,6 @@
-import {Card, ThemeColorProvider, ThemeProvider} from '@sanity/ui'
+import {Card, ThemeColorProvider, ThemeProvider, PortalProvider, LayerProvider} from '@sanity/ui'
 import config from 'config:sanity'
 import RootComponent from 'part:@sanity/base/root'
-import {LayerProvider} from 'part:@sanity/components/layer'
-import {PortalProvider} from 'part:@sanity/components/portal'
 import SnackbarProvider from 'part:@sanity/components/snackbar/provider'
 import React, {useState} from 'react'
 import Refractor from 'react-refractor'
@@ -37,7 +35,7 @@ function SanityRoot() {
         <PortalProvider element={portalElement}>
           <LayerProvider>
             <SnackbarProvider>
-              <ThemeColorProvider variant="transparent">
+              <ThemeColorProvider tone="transparent">
                 <GlobalStyle />
               </ThemeColorProvider>
               <Root scheme={colorScheme}>
